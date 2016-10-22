@@ -49,6 +49,12 @@ html {
 #pause.paused {
 	background-image: url(pause1.svg);
 }
+#stop {
+    background-image: url(stop.svg);
+}
+#stop.stopped {
+    background-image: url(stop1.svg);
+}
 @media (max-width: 700px) {
     html {
         font-size: 14pt;
