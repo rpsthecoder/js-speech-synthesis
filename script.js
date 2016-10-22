@@ -7,7 +7,7 @@ if ('speechSynthesis' in window) with(speechSynthesis) {
         if(!speaking) { /* start narration */
             utterance = new SpeechSynthesisUtterance(document.querySelector('article').textContent);
             utterance.voice = getVoices()[0];
-            utterance.onend = ()=>{this.className = ''; };
+            utterance.onend = ()=>{this.className = this.nextElementSibling.className = ''; cancel()};
             this.className = 'played';
             speak(utterance);
         } else if (paused) { /* unpause/resume narration */
