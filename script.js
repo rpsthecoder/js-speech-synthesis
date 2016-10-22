@@ -1,28 +1,52 @@
 onload = function() {
     if ('speechSynthesis' in window) with(speechSynthesis) {
 
-        document.querySelector('#play').addEventListener('click', onClickPlay);
-        document.querySelector('#pause').addEventListener('click', onClickPause);
+
+        var playEle = document.querySelector('#play');
+        var pauseEle = document.querySelector('#pause');
+        var stopEle = document.querySelector('#stop');
+        var flag = false;
+
+
+        playEle.addEventListener('click', onClickPlay);
+        pauseEle.addEventListener('click', onClickPause);
+        stopEle.addEventListener('click', onClickStop);
 
         function onClickPlay() {
-            if(!speaking) { /* start narration */
+            if(!flag){
+                flag = true;
                 utterance = new SpeechSynthesisUtterance(document.querySelector('article').textContent);
                 utterance.voice = getVoices()[0];
-                utterance.onend = function(){this.className = this.nextElementSibling.className = ''; cancel()};
-                this.className = 'played';
+                utterance.onend = function(){
+                    flag = false; playEle.className = pauseEle.className = ''; stopEle.className = 'stopped';
+                };
+                playEle.className = 'played';
+                stopEle.className = '';
                 speak(utterance);
-            } else if (paused) { /* unpause/resume narration */
-                this.className = 'played';
-                this.nextElementSibling.className = '';
+            }
+             if (paused) { /* unpause/resume narration */
+                playEle.className = 'played';
+                pauseEle.className = '';
                 resume();
             } 
         }
 
         function onClickPause() {
             if(speaking && !paused){ /* pause narration */
-                this.className = 'paused';
-                this.previousElementSibling.className = '';
+                pauseEle.className = 'paused';
+                playEle.className = '';
                 pause();
+            }
+        }
+
+        function onClickStop() {
+            if(speaking){ /* stop narration */
+                /* for safari */
+                stopEle.className = 'stopped';
+                playEle.className = pauseEle.className = '';
+                flag = false;
+                cancel();
+
             }
         }
 
