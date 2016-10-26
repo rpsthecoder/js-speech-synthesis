@@ -1,8 +1,11 @@
 # Text to Speech using JavaScript
 
-Interfaces used: [`speechSynthesis`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) and [`SpeechSynthesisUtterance`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance)
+Add Text to Speech feature (vocal narration of text displayed on screen) to webpages, using JavaScript's Web Speech API.  
 
-&#x21e2; [Codepen Pen](https://codepen.io/rpsthecoder/pen/PGXvby)
+Interfaces used: [`speechSynthesis`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) and [`SpeechSynthesisUtterance`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance).
+
+&#x21e2; [Codepen Pen](https://codepen.io/rpsthecoder/pen/PGXvby)  
+&#x21e2; [Demo Page](http://bit.ly/jsspeechsynthesis)
 
 Supported Browsers:  
 
