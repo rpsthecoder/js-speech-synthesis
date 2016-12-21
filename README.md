@@ -9,11 +9,11 @@ Interfaces used: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Speec
 
 Supported Browsers:  
 
-<img src="https://github.com/alrra/browser-logos/raw/master/chrome/chrome_256x256.png" width=32px> 
-<img src="https://github.com/alrra/browser-logos/raw/master/edge/edge_256x256.png" width=32px>
-<img src="https://github.com/alrra/browser-logos/raw/master/firefox/firefox_256x256.png" width=32px>
-<img src="https://github.com/alrra/browser-logos/raw/master/safari/safari_256x256.png" width=32px>
-<img src="https://github.com/alrra/browser-logos/raw/master/opera/opera_256x256.png" width=32px>
+<img src="https://github.com/alrra/browser-logos/raw/master/src/chrome/chrome_256x256.png" width=32px> 
+<img src="https://github.com/alrra/browser-logos/raw/master/src/edge/edge_256x256.png" width=32px>
+<img src="https://github.com/alrra/browser-logos/raw/master/src/firefox/firefox_256x256.png" width=32px>
+<img src="https://github.com/alrra/browser-logos/raw/master/src/safari/safari_256x256.png" width=32px>
+<img src="https://github.com/alrra/browser-logos/raw/master/src/opera/opera_256x256.png" width=32px>
 
 
 <p align=center><img src="https://octodex.github.com/images/labtocat.png" width=160px><br>Web Speech API is experimental</p>
